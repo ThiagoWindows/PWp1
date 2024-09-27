@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+
+.barra-navegacao {
+    background-color: #6284ff;
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo-galeria {
+    margin: 0;
+}
+
+.galeria {
+    display: -ms-inline-grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    width: 100%;
+}
+
+.miniatura {
+    width: 14%;
+    height: 300px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    object-fit: contain;
+    margin: 2vh;
+}
+
+img{
+}
+
+.miniatura:hover {
+    transform: scale(1.05);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    align-items: center;
+}
+
+.modal.ativo {
+    display: flex;
+    opacity: 1;
+    animation: abrirModal 0.5s forwards;
+}
+
+@keyframes abrirModal {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.conteudo-modal {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+.fechar {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.seta {
+    position: absolute;
+    top: 50%;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    user-select: none;
+    transform: translateY(-50%);
+}
+
+.esquerda {
+    left: 15px;
+}
+
+.direita {
+    right: 15px;
+}

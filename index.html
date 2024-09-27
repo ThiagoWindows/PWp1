@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Minha Galeria</title>
+</head>
+<body>
+    <nav class="barra-navegacao">
+        <h1 class="titulo-galeria">Minha Galeria</h1>
+    </nav>
+    <div class="galeria">
+        <div class="miniatura">    
+            <img src="img/foto1.JPEG" onclick="abrirModal(this)">
+        </div>
+        <div class="miniatura">    
+            <img src="img/foto2.JPEG" onclick="abrirModal(this)">
+        </div>
+        <div class="miniatura">    
+            <img src="img/foto3.JPEG" onclick="abrirModal(this)"> 
+        </div>
+        <div class="miniatura">    
+            <img src="img/foto4.JPEG" onclick="abrirModal(this)">
+        </div>
+        <div class="miniatura">    
+            <img src="img/foto5.JPEG" onclick="abrirModal(this)">
+        </div>
+        <div class="miniatura">    
+            <img src="img/foto6.JPEG" onclick="abrirModal(this)">
+        </div>
+        <div class="miniatura">    
+            <img src="img/foto7.JPEG" onclick="abrirModal(this)">
+        </div>
+        <div class="miniatura">    
+            <img src="img/foto8.JPEG" onclick="abrirModal(this)">
+        </div>
+        <div class="miniatura">    
+            <img src="img/foto9.JPEG" onclick="abrirModal(this)">
+        </div>
+        <div class="miniatura">    
+            <img src="img/foto10.JPEG" onclick="abrirModal(this)">
+        </div>
+        <div class="miniatura">    
+            <img src="img/foto11.JPEG" onclick="abrirModal(this)">
+        </div>
+        <div class="miniatura">    
+            <img src="img/foto12.JPEG" onclick="abrirModal(this)">
+        </div>
+        <div class="miniatura">   
+            <img src="img/foto13.JPEG" onclick="abrirModal(this)">
+        </div>
+    </div>
+    <div id="meuModal" class="modal">
+        <span class="fechar" onclick="fecharModal()">&times;</span>
+        <span class="seta esquerda" onclick="trocarImagem(-1)">&#10094;</span>
+        <img class="conteudo-modal" id="img01">
+        <span class="seta direita" onclick="trocarImagem(1)">&#10095;</span>
+    </div>
+    
+    
+    <script src="java.js"></script>
+</body>
+</html>
